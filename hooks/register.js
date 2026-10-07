@@ -1,7 +1,19 @@
-const OPUS_SIGNALS   = ['think deeply', 'analyze', 'review all',
-                        'architect', 'audit', 'explain in depth']
-const HAIKU_SIGNALS  = ['quick:', 'briefly', 'just ', 'one-liner',
-                        'tldr', 'explain briefly']
+const OPUS_SIGNALS = [
+  'think deeply', 'analyze', 'review all', 'architect', 'audit', 'explain in depth',
+  'deep dive', 'root cause', 'why is this failing', 'debug this',
+  'code review', 'refactor', 'production ready', 'edge cases',
+  'write tests', 'security review', 'performance review',
+  'compare approaches', 'pros and cons', 'best approach', 'trade-offs',
+  'design system', 'design pattern'
+]
+
+const HAIKU_SIGNALS = [
+  'quick:', 'briefly', 'just ', 'one-liner', 'tldr', 'explain briefly',
+  'what is', 'define ', 'remind me', 'what does', 'syntax for',
+  'how do i', 'example of', 'give me a', 'list ',
+  'rename this', 'fix typo', 'format this', 'translate'
+]
+
 const SONNET_DEFAULT = 'claude-sonnet-4-6'
 const OPUS_ID        = 'claude-opus-4-5'
 const HAIKU_ID       = 'claude-haiku-4-5'
