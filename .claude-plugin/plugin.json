@@ -1,0 +1,8 @@
+{
+  "name": "smart-model-switcher",
+  "version": "1.0.0",
+  "description": "Switch models via prompt keywords",
+  "author": {
+    "name": "Abhi"
+  }
+}
