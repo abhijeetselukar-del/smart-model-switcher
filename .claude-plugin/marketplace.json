@@ -1,0 +1,11 @@
+{
+  "name": "abhi-local",
+  "owner": { "name": "Abhi" },
+  "plugins": [
+    {
+      "name": "smart-model-switcher",
+      "source": "./",
+      "description": "Switch models via prompt keywords"
+    }
+  ]
+}

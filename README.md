@@ -18,19 +18,46 @@ Triggers on: `quick:`, `briefly`, `just `, `one-liner`, `tldr`, `explain briefly
 
 The current model is shown in the Spinner suffix (e.g. `· Opus`, `· Haiku`, `· Sonnet`) so you always know which model is active.
 
-## Installation
+## Install (2 minutes)
+
+You need [Claude Code](https://claude.com/claude-code) installed. Run these two commands in your terminal:
+
+```bash
+claude plugin marketplace add abhijeetselukar-del/smart-model-switcher
+claude plugin install smart-model-switcher@abhi-local
+```
+
+Then **start a new Claude Code session**. That's it. It stays on permanently, in the terminal and in the Claude app's Code tab, with no flags to remember.
+
+Prefer typing inside Claude Code? Run these instead:
 
 ```
+/plugin marketplace add abhijeetselukar-del/smart-model-switcher
+/plugin install smart-model-switcher@abhi-local
+```
+
+### Check it works
+
+Send `quick: what is a closure`. The spinner should show `· Haiku`.
+
+### Existing sessions
+
+Sessions that were already open when you installed won't pick it up. Quit and resume them: `claude --continue`.
+
+### Try it without installing
+
+```bash
+git clone https://github.com/abhijeetselukar-del/smart-model-switcher ~/smart-model-switcher
 claude --plugin-dir ~/smart-model-switcher
 ```
 
-Or add it permanently to your Claude Code config:
+This only lasts for that one session.
 
-```jsonc
-// ~/.claude/settings.json
-{
-  "pluginDirs": ["~/smart-model-switcher"]
-}
+### Uninstall
+
+```bash
+claude plugin uninstall smart-model-switcher@abhi-local
+claude plugin marketplace remove abhi-local
 ```
 
 ## Hooks
@@ -45,6 +72,7 @@ Or add it permanently to your Claude Code config:
 
 ```
 .claude-plugin/plugin.json   # manifest
+.claude-plugin/marketplace.json  # lets people install it straight from GitHub
 hooks/hooks.json             # hook registration
 hooks/register.js            # plugin logic
 tsconfig.json                # TypeScript config
