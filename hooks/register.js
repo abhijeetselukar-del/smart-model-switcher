@@ -14,9 +14,9 @@ const HAIKU_SIGNALS = [
   'rename this', 'fix typo', 'format this', 'translate'
 ]
 
-const SONNET_DEFAULT = 'claude-sonnet-4-6'
-const OPUS_ID        = 'claude-opus-4-5'
-const HAIKU_ID       = 'claude-haiku-4-5'
+const SONNET_DEFAULT = 'claude-sonnet-5-5'
+const OPUS_ID        = 'claude-opus-5-5'
+const HAIKU_ID       = 'claude-haiku-5-5'
 
 let targetModel = SONNET_DEFAULT
 let switchLog   = []
